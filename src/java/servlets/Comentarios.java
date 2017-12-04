@@ -8,9 +8,9 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 import dataAccess.ConnectionDB;
-import dataAccess.ParticipantesDAO;
+import dataAccess.ComentariosDAO;
 
-import model.Participante;
+import model.Comentario;
 
 @WebServlet("/comentarios")
 public class Comentarios extends HttpServlet {
@@ -29,14 +29,14 @@ public class Comentarios extends HttpServlet {
      
 
         //Crear instancia
-        Comentario comentario = new Comentario(Nombre, Nombre, Email, Tema, Asunto, Comentario);
+        Comentario comentario = new Comentario(Nombre, Email, Tema, Asunto, Comentario);
 
         //Guardar instancia en base de datos
         ConnectionDB connectionDB = new ConnectionDB();
         Connection connection = connectionDB.getConnectionDB();
 
-        ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
-        participantesDAO.addParticipantes(comentario);
+        ComentariosDAO comentariosDAO = new ComentariosDAO(connection);
+        comentariosDAO.addComentarios(comentario);
 
         //Guardar instancia en objeto request para usarse por jsp
         request.setAttribute("comentario", comentario);
