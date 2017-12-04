@@ -6,7 +6,7 @@
         <title>El Poder de Uno Login</title>
     </head>
     <body>
-        <form method="post" action="index.jsp">
+        <form method="post" action="indexPrueba.jsp">
             <center>
                 <img src="img/logo.png">
             <table border="1" width="30%" cellpadding="3">
