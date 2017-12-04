@@ -29,17 +29,17 @@ public class Comentarios extends HttpServlet {
      
 
         //Crear instancia
-        Participante participante = new Participante(Nombre, Nombre, Email, Tema, Asunto, Comentario);
+        Comentario comentario = new Comentario(Nombre, Nombre, Email, Tema, Asunto, Comentario);
 
         //Guardar instancia en base de datos
         ConnectionDB connectionDB = new ConnectionDB();
         Connection connection = connectionDB.getConnectionDB();
 
         ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
-        participantesDAO.addParticipantes(participante);
+        participantesDAO.addParticipantes(comentario);
 
         //Guardar instancia en objeto request para usarse por jsp
-        request.setAttribute("participante", participante);
+        request.setAttribute("comentario", comentario);
 
         //Enviar control a displayEmail.jsp
         String address = "/WEB-INF/displayAll.jsp";
