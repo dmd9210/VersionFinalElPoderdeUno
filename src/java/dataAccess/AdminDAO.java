@@ -39,7 +39,7 @@ private static final Logger logger
         public boolean findAdmin(String usuario, String pass) {
         Admin admin = null;
         try {
-            statement = connection.prepareStatement("SELECT * FROM marcadores.admin WHERE usuario = ? AND pass = ?");
+            statement = connection.prepareStatement("SELECT * FROM elpoderdeuno.admin WHERE usuario = ? AND pass = ?");
             statement.setString(1, usuario);
             statement.setString(2, pass);
             synchronized (statement) {

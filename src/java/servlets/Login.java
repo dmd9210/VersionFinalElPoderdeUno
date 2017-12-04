@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
             String pass = request.getParameter("pass");
             boolean found = adminDAO.findAdmin(usuario, pass);
             if (found) {
-               String address = "listamarcadores.html";
+               String address = "index.jsp";
                             RequestDispatcher dispatcher
                                     = request.getRequestDispatcher(address);
                             dispatcher.forward(request, response);

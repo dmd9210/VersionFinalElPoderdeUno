@@ -39,7 +39,7 @@ private static final Logger logger
 	public ArrayList<Marcador> getmarcadoresList() {
 		ArrayList<Marcador> marcadoresList = new ArrayList<Marcador>();
 		try {
-			statement = connection.prepareStatement(" SELECT * FROM marcadores.marcador");
+			statement = connection.prepareStatement(" SELECT * FROM elpoderdeuno.marcador");
 				//obtain list of guard 
 			synchronized (statement) {
 				ResultSet results = statement.executeQuery();
@@ -69,7 +69,7 @@ private static final Logger logger
 	public void addMarcadores (Marcador marcador){
 		try{
 			statement = 
-			connection.prepareStatement("INSERT INTO marcadores.marcador VALUES(?,?,?,?)"); 
+			connection.prepareStatement("INSERT INTO elpoderdeuno.marcador VALUES(?,?,?,?)"); 
 				synchronized(statement){
                                         statement.setString(1,marcador.getIdMarcadores());
 					statement.setString(2,marcador.getNombre());
@@ -90,7 +90,7 @@ private static final Logger logger
          public void updateMarcador (Marcador marcador) {
         try {
             statement
-                    = connection.prepareStatement("UPDATE marcadores.marcador SET nombre=?,latitud=?," 
+                    = connection.prepareStatement("UPDATE elpoderdeuno.marcador SET nombre=?,latitud=?," 
                             + "longitud=? WHERE idMarcadores=?");
             synchronized (statement) {
                 statement.setString(1, marcador.getNombre());
@@ -111,7 +111,7 @@ private static final Logger logger
         public void deleteMarcador(String idMarcadores) {
             try {
                 statement
-                        = connection.prepareStatement("DELETE FROM marcadores.marcador WHERE idMarcadores=?;");
+                        = connection.prepareStatement("DELETE FROM elpoderdeuno.marcador WHERE idMarcadores=?;");
                 synchronized (statement) {
                     statement.setString(1,idMarcadores);
                     statement.executeUpdate();
@@ -129,7 +129,7 @@ private static final Logger logger
 
         try {
             statement
-                    = connection.prepareStatement("SELECT * FROM marcadores.marcador WHERE idMarcadores=?;");
+                    = connection.prepareStatement("SELECT * FROM elpoderdeuno.marcador WHERE idMarcadores=?;");
             synchronized (statement) {
                 statement.setString(1, idMarcadores);
                 statement.executeQuery();
@@ -160,7 +160,7 @@ private static final Logger logger
         ArrayList<Marcador> marcadoresList = new ArrayList<Marcador>();
        
         try {
-            statement = connection.prepareStatement("SELECT * FROM marcadores.marcador;");
+            statement = connection.prepareStatement("SELECT * FROM elpoderdeuno.marcador;");
             synchronized (statement) {
                 ResultSet results = statement.executeQuery();
                 while (results.next()) {
