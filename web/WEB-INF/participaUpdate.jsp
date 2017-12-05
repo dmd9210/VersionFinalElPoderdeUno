@@ -17,7 +17,6 @@
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5495488a700cc478508b4567.css?themeRevisionID=58c4deb39a11c7b8878b4567"/>
 <style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Abel);
-
     .form-label-left{
         width:150px;
     }
@@ -33,7 +32,6 @@
         padding:0;
         background:rgba(39, 38, 38, 0.56);
     }
-
     .form-all{
         margin:0px auto;
         padding-top:0px;
@@ -45,7 +43,6 @@
     .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
         color: false;
     }
-
 </style>
 
 <style type="text/css" id="form-designer-style">
@@ -212,7 +209,6 @@
        }, 20);
     /*INIT-END*/
 });
-
    JotForm.prepareCalculationsOnTheFly([null,null,null,null,null,null,null,null,null,{"name":"enviar","qid":"9","text":"Enviar","type":"control_button"},{"name":"sinvotonohaydinero","qid":"10","text":"#SinVotoNoHayDinero","type":"control_head"},null,{"name":"correo","qid":"12","text":"Correo","type":"control_email"},{"name":"numeroDe","qid":"13","text":"Telefono","type":"control_phone"},{"name":"matricula","qid":"14","text":"Matricula","type":"control_textbox"},{"name":"nombreCompleto","qid":"15","text":"Nombre Completo","type":"control_fullname"},{"name":"edad","qid":"16","text":"Edad","type":"control_number"},{"name":"genero","qid":"17","text":"Genero","type":"control_dropdown"},{"name":"nivelDe","qid":"18","text":"Nivel de Estudio","type":"control_dropdown"}]);
    setTimeout(function() {
 JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"name":"enviar","qid":"9","text":"Enviar","type":"control_button"},{"name":"sinvotonohaydinero","qid":"10","text":"#SinVotoNoHayDinero","type":"control_head"},null,{"name":"correo","qid":"12","text":"Correo","type":"control_email"},{"name":"numeroDe","qid":"13","text":"Telefono","type":"control_phone"},{"name":"matricula","qid":"14","text":"Matricula","type":"control_textbox"},{"name":"nombreCompleto","qid":"15","text":"Nombre Completo","type":"control_fullname"},{"name":"edad","qid":"16","text":"Edad","type":"control_number"},{"name":"genero","qid":"17","text":"Genero","type":"control_dropdown"},{"name":"nivelDe","qid":"18","text":"Nivel de Estudio","type":"control_dropdown"}]);}, 20); 
@@ -308,7 +304,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
       </li>
       <li class="form-line jf-required" data-type="control_phone" id="id_13">
         <label class="form-label form-label-left form-label-auto" id="label_13" for="input_13_area">
-          Tel√©fono
+          TelÈfono
           <span class="form-required">
             *
           </span>
@@ -352,10 +348,9 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_18" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_18" value="${participante.proyecto}" name="Proyecto" style="width:150px;" data-component="dropdown" required="">
-            <option value="Sin Voto No Hay Dinero" ${ participante.proyecto == 'SinVotoNoHayDinero' ? 'selected="selected"' : '' }> Sin Voto No Hay Dinero </option>
-            <option value="Presidente 2018" ${ participante.proyecto == 'Presidente2018' ? 'selected="selected"' : '' }> Presidente 2018 </option>
-            <option value="Como Vamos Torreon" ${ participante.proyecto == 'ComoVamosTorreon' ? 'selected="selected"' : '' }> Como Vamos Torreon </option>
-            <option value="Laguna Limpia" ${ participante.proyecto == 'LagunaLimpia' ? 'selected="selected"' : '' }> Laguna Limpia </option>
+            <c:forEach items="${projectosList}" var="proyecto">
+                <option value="${ proyecto.getId() }">${ proyecto.getNombre() }</option>
+            </c:forEach>
           </select>
         </div>   
         </li>
@@ -373,7 +368,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         <div id="cid_9" class="form-input-wide">
           <div style="margin-left:156px;" class="form-buttons-wrapper">
             <button id="input_9" type="button" class="form-submit-button" data-component="button">
-              Regresar a p√°gina principal
+              Regresar a p·gina principal
             </button>
           </div>
         </div> 
