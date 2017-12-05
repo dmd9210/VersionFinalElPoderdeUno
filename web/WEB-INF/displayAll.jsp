@@ -58,8 +58,8 @@
                         <td>${participantesElement.nivelEstudio}</td>
                         <td>${participantesElement.proyecto}</td>
                         <td>
-                            <a href="/Proyecto_Final_ElPoderdeUno/updateParticipante?idMatricula=${participantesElement.idMatricula}"> Actualizar</a>
-                            <a href="/Proyecto_Final_ElPoderdeUno/deleteParticipante?idMatricula=${participantesElement.idMatricula}"> Borrar</a>
+                            <a href="/VersionFinalElPoderdeUno/updateParticipante?idMatricula=${participantesElement.idMatricula}"> Actualizar</a>
+                            <a href="/VersionFinalElPoderdeUno/deleteParticipante?idMatricula=${participantesElement.idMatricula}"> Borrar</a>
                         </td>
         </tr>
     </c:forEach>  
