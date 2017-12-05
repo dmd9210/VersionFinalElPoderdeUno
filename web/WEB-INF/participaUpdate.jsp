@@ -348,7 +348,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_18" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_18" value="${participante.proyecto}" name="Proyecto" style="width:150px;" data-component="dropdown" required="">
-            <c:forEach items="${projectosList}" var="proyecto">
+            <c:forEach items="${proyectosList}" var="proyecto">
                 <option value="${ proyecto.getId() }">${ proyecto.getNombre() }</option>
             </c:forEach>
           </select>

@@ -55,7 +55,7 @@ public class DisplayAllParticipante extends HttpServlet{
 		request.setAttribute("proyectosList", proyectosList);
 
 		//Mandar llamar a la pagina
-		String address = "/WEB-INF/displayParticipante.jsp";
+		String address = "/WEB-INF/displayAll.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
 		dispatcher.forward(request,response);
 	}

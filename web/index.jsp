@@ -247,7 +247,6 @@
 
                         <p class="copyright">Copyright &copy; 2015 - Tecnológico de Monterrey </p>
                         <a href="index1.jsp"> Panel de Administración</a>
-                        <a href="indexPrueba.jsp"> Panel de Administración Prueba</a>
                     </div>
 
                 </div>

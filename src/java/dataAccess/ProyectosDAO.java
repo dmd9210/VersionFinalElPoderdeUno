@@ -41,7 +41,7 @@ public class ProyectosDAO {
     public ArrayList<Proyecto> getProyectosList() {
         ArrayList<Proyecto> proyectosList = new ArrayList<Proyecto>();
         try {
-            statement = connection.prepareStatement(" SELECT * FROM proyecto");
+            statement = connection.prepareStatement(" SELECT * FROM elpoderdeuno.proyecto");
             //obtain list of guard 
             synchronized (statement) {
                 ResultSet results = statement.executeQuery();
