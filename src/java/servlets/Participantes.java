@@ -46,7 +46,7 @@ public class Participantes extends HttpServlet {
         request.setAttribute("participante", participante);
 
         //Enviar control a displayEmail.jsp
-        String address = "/WEB-INF/displayAll.jsp";
+        String address = "/WEB-INF/displayParticipante.jsp";
         RequestDispatcher dispatcher
                 = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
