@@ -87,7 +87,7 @@
 
                 /*background-color: #787878;*/
 
-            }
+                        }
 
 
 
